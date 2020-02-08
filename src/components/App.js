@@ -26,7 +26,4 @@ App.propTypes = {
   children: PropTypes.element
 };
 
-const ConnectedApp = connect(
-  {}, {})(App);
-
-export default hot(module)(ConnectedApp);
+export default hot(module)(App);

@@ -30,7 +30,4 @@ HomePage.propTypes = {
   })
 };
 
-export default connect(
-  {},
-  {}
-)(HomePage);
+export default HomePage;
