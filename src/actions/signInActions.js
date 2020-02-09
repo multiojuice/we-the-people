@@ -55,7 +55,7 @@ export function createSchool(username, password, name, zipcode, description, lev
     const {id} = response;
     console.warn('BOO1M', id);
 
-    const accountCreation = await fetch(`${Constants.api_url}/login`, {
+    const accountCreation = await fetch(`${Constants.api_url}/public-schools`, {
       headers: {
         'Content-Type': 'application/json'
       },
