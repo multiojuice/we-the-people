@@ -26,6 +26,9 @@ class SignIn extends Component {
   render() {
     // console.warn(this.state)
     // console.warn(this.props)
+    if(this.props.loginInformation.signedIn) {
+      this.props.history.push('/');
+    }
 
     return (
       <FlexCol>
@@ -46,6 +49,9 @@ SignIn.propTypes = {
   }),
   actions: PropTypes.shape({
     signIn: PropTypes.func
+  }),
+  loginInformation: PropTypes.shape({
+    signedIn: PropTypes.bool
   })
 };
 

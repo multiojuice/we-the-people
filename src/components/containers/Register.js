@@ -35,7 +35,7 @@ class Register extends Component {
             <ContentSlogan>
                 <Slogan>Which are you?</Slogan>
             </ContentSlogan>
-            <Link to="/registerMock" style={{ textDecoration: 'none', color: 'black'}}>
+            <Link to="/registerSchool" style={{ textDecoration: 'none', color: 'black'}}>
                 <RegisterOptionsContainer>
                     <RegisterOption>
                         <h2>University</h2>

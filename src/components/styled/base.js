@@ -72,6 +72,7 @@ export const RoundedSubmitButton = styled.button`
     width: 20%;
     outline: white;
     margin-top: 16px;
+    cursor: pointer;
 `;
 
 const Main = styled.div`

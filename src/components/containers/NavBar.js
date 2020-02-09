@@ -30,11 +30,13 @@ class NavBar extends Component {
                     Contact
                 </NavLinkStyled>
             </Link>
+            { !this.props.signedIn &&
             <Link to="/register" style={{ textDecoration: 'none', color: 'black' }}>
                 <NavLinkStyled>
                     Register
                 </NavLinkStyled>
-            </Link>       
+            </Link>   
+            }    
             { !this.props.signedIn ?
              <Link to="/signin" style={{ textDecoration: 'none', color: 'black' }}>
                 <NavLinkStyled>

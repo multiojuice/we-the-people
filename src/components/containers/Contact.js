@@ -23,7 +23,7 @@ class Contact extends Component {
         <RoundedSubmitInput id="username" onChange={this.handleChange}/>
         <RoundedSubmitTitle>Questions/Comments</RoundedSubmitTitle>
         <RoundedSubmitInput id="password" onChange={this.handleChange}/>
-        <RoundedSubmitButton onClick={this.signinAction}>Sign in</RoundedSubmitButton>
+        <RoundedSubmitButton onClick={this.signinAction}>Send</RoundedSubmitButton>
       </FlexCol>
       </Main>
     );
