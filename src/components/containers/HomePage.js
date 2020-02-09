@@ -16,7 +16,7 @@ class HomePage extends Component {
       <Main>
         <ContentSlogan>
           <Slogan>
-            Empowering universities <br/>to lift their communities through education.
+            Empowering universities <br/>to raise their communities through education.
           </Slogan>
         </ContentSlogan>
       </Main>

@@ -25,6 +25,8 @@ export const FlexCol = styled.div`
     width: 100%;
     justify-content: center;
     flex-flow: column;
+    margin: 4vh 0vh;
+    height: 60%;
 `;
 
 export const RoundedSubmitWrapper = styled.div`
@@ -38,6 +40,7 @@ export const RoundedSubmitTitle = styled.p`
     font-weight: 700;
     color: black;
     margin: 0 14px;
+    margin-top: 14px;
 `;
 
 //    width: 100%;
@@ -68,6 +71,7 @@ export const RoundedSubmitButton = styled.button`
     height: 34px;
     width: 20%;
     outline: white;
+    margin-top: 16px;
 `;
 
 const Main = styled.div`
