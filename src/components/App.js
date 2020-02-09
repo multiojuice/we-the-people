@@ -11,7 +11,8 @@ import Footer from './containers/Footer'
 import HomePage from "./containers/HomePage";
 import About from "./containers/About";
 import Contact from "./containers/Contact";
-import Register from './containers/Register'
+import Register from './containers/Register';
+import RegisterMock from "./containers/RegisterMock";
 import SignIn from "./containers/SignIn";
 import SignOut from "./containers/SignOut";
 import NotFoundPage from "./NotFoundPage";
@@ -28,6 +29,7 @@ class App extends React.Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/register" component={Register}/>
+            <Route exact path="/registerMock" component={RegisterMock}/>
             <Route exact path="/signout" component={SignOut}/>
             <Route exact path="/signin" component={SignIn}/>
             <Route component={NotFoundPage} />

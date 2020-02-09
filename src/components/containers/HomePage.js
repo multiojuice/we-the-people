@@ -22,7 +22,7 @@ class HomePage extends Component {
           </Slogan>
         </ContentSlogan>
         <ContentNotes>
-          <Parallax y={[10, -40]}>
+          <Parallax y={[40, -40]}>
             <Note color='#ffb6b9'>
               <NoteTitle>College Students</NoteTitle>
               <NoteInfo>Enabling college students to give back to their community and offering real world experience with helping others. Filling not only community service requirements, but also the desire to help.</NoteInfo>
@@ -34,7 +34,7 @@ class HomePage extends Component {
               <NoteInfo>Helping broaden the horizons of students at an early age and allowing them to find their passion early in life. We strive to inform accurately, effectively, and joyously.</NoteInfo>
             </Note>
           </Parallax>
-          <Parallax y={[-10, 30]}>
+          <Parallax y={[-30, 30]}>
             <Note color='#bbded6'>
               <NoteTitle>Institutions</NoteTitle>
               <NoteInfo>Helping universities give back to their local schools in order to better the education of entire communities. While also strengthening institutional relations between universities and local schools.</NoteInfo>

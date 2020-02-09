@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from '../../actions/signInActions';
-import {Link} from 'react-router-dom'
-import {Main} from '../styled/base'
 import {ContentSlogan, Slogan} from '../styled/home_content_styles'
-import {RegisterOption, RegisterOptionsContainer} from '../styled/register_styles'
+import {Main, FlexCol, RoundedSubmitInput, RoundedSubmitTitle, RoundedSubmitButton} from '../styled/base';
 
-class Register extends Component {
+
+class RegisterMock extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +15,7 @@ class Register extends Component {
     }
   }
 
-  registerAction = () => {
+  registerMockAction = () => {
     this.props.actions.signIn(this.state.username, this.state.password);
   }
 
@@ -33,27 +32,25 @@ class Register extends Component {
     return (
         <Main>
             <ContentSlogan>
-                <Slogan>Which are you?</Slogan>
+                <Slogan>Tell us a bit about yourself!</Slogan>
             </ContentSlogan>
-            <Link to="/registerMock" style={{ textDecoration: 'none', color: 'black'}}>
-                <RegisterOptionsContainer>
-                    <RegisterOption>
-                        <h2>University</h2>
-                    </RegisterOption>
-                    <RegisterOption>
-                        <h2>School</h2>
-                    </RegisterOption>
-                    <RegisterOption>
-                        <h2>Mentor</h2>
-                    </RegisterOption>
-                </RegisterOptionsContainer>
-            </Link>
+            <FlexCol>
+                <RoundedSubmitTitle>Name</RoundedSubmitTitle>
+                <RoundedSubmitInput id="name" onChange={this.handleChange}/>
+                <RoundedSubmitTitle>Address</RoundedSubmitTitle>
+                <RoundedSubmitInput id="address" onChange={this.handleChange}/>
+                <RoundedSubmitTitle>Description</RoundedSubmitTitle>
+                <RoundedSubmitInput id="description" onChange={this.handleChange}/>
+                <RoundedSubmitTitle>Level</RoundedSubmitTitle>
+                <RoundedSubmitInput id="level" onChange={this.handleChange}/>
+                <RoundedSubmitButton onClick={this.signinAction}>Register</RoundedSubmitButton>
+            </FlexCol>
         </Main>
     );
   }
 }
 
-Register.propTypes = {
+RegisterMock.propTypes = {
   children: PropTypes.element,
   history: PropTypes.shape({
     push: PropTypes.func
@@ -78,4 +75,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Register);
+)(RegisterMock);
