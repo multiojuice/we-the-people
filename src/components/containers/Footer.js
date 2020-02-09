@@ -22,7 +22,7 @@ class NavBar extends Component {
                 O2
             </FooterItem>
             <FooterItem>
-                Random Shit
+                We The People
             </FooterItem>
         </FooterStyled>
     );
