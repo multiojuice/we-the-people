@@ -62,3 +62,11 @@ export const RoundedSubmitButton = styled.button`
     outline: white;
 `;
 
+const Main = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+export {
+    Main 
+}

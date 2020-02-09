@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 const NavStyled = styled.div`
     height: auto;
-    width: 93.1%;
-    background-color: #7d8cc4;
+    width: 100%;
     position: absolute;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
-    padding: 10px 50px 10px;
+    justify-content: center;
+    margin: 2em 0em;
 `
 
 const NavLinksStyled = styled.div`
@@ -17,19 +17,21 @@ const NavLinksStyled = styled.div`
     flex-direction: row;
     padding: 0px 50px;
     align-items: center;
-    justify-content: space-evenly;
-    width: 20%;
+    justify-content: center;
+    width: inherit;
     font-size: large;
 }
 `
 const NavLinkStyled = styled.a`
     font-weight: light;
+    margin: 0em 3em;
 `
 
 
 const Title = styled.h1`
     color: black;
-    font-size: 40px;
+    font-size: 60px;
+    width: inherit;
 `
 
 export {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom'
-import {NavStyled, NavLinksStyled, Title, NavLinkStyled} from '../styled/navstyles'
+import {NavStyled, NavLinksStyled, Title, NavLinkStyled} from '../styled/nav_styles'
 
 
 class NavBar extends Component {
@@ -15,7 +15,9 @@ class NavBar extends Component {
   render() {
     return (
       <NavStyled>
-        <Title>{this.state.title}</Title>
+        <Link to="/" style={{ textDecoration: 'none', color: 'black'}}>
+            <Title>{this.state.title}</Title>
+        </Link>
         <NavLinksStyled>
             <Link to="/about" style={{ textDecoration: 'none', color: 'black'}}>
                 <NavLinkStyled>
