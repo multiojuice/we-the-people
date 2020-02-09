@@ -12,7 +12,7 @@ class SignOut extends Component {
 
   render() {
     return (
-      <NavBar></NavBar>
+      <div></div>
     );
   }
 }
