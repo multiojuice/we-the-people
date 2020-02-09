@@ -5,7 +5,7 @@ import colors from '../../constants/colors';
 //background-image: url(${backgroundImage});
 const ContentSlogan = styled.div`
     box-sizing: border-box;
-    margin: 15% 5vh;
+    margin: 20vh 5vh;
     text-align: center;
     display: flex;
     align-items: center;

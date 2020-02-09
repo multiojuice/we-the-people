@@ -18,7 +18,7 @@ const NavLinksStyled = styled.div`
     font-size: large;
 }
 `
-const NavLinkStyled = styled.a`
+const NavLinkStyled = styled.h2`
     font-weight: light;
     margin: 0vh 2vh;
 `
