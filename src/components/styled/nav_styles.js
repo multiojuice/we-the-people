@@ -3,7 +3,6 @@ import styled from 'styled-components'
 const NavStyled = styled.div`
     height: auto;
     width: 100%;
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -32,6 +31,7 @@ const Title = styled.h1`
     color: black;
     font-size: 60px;
     width: inherit;
+    font-family: 'Pinyon Script', cursive;
 `
 
 export {
