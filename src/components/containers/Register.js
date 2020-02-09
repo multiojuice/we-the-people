@@ -26,6 +26,10 @@ class Register extends Component {
     })
   }
 
+  changePage = (event) => {
+    this.props.history.push(`/register${event.target.id}`);
+  }
+
   render() {
     // console.warn(this.state)
     // console.warn(this.props)
@@ -35,19 +39,17 @@ class Register extends Component {
             <ContentSlogan>
                 <Slogan>Which are you?</Slogan>
             </ContentSlogan>
-            <Link to="/registerSchool" style={{ textDecoration: 'none', color: 'black'}}>
                 <RegisterOptionsContainer>
-                    <RegisterOption>
+                    <RegisterOption id="University" onClick={this.changePage}>
                         <h2>University</h2>
                     </RegisterOption>
-                    <RegisterOption>
+                    <RegisterOption id="School" onClick={this.changePage}>
                         <h2>School</h2>
                     </RegisterOption>
-                    <RegisterOption>
+                    <RegisterOption id="Mentor" onClick={this.changePage}>
                         <h2>Mentor</h2>
                     </RegisterOption>
                 </RegisterOptionsContainer>
-            </Link>
         </Main>
     );
   }

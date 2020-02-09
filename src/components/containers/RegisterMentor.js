@@ -7,7 +7,7 @@ import {ContentSlogan, Slogan} from '../styled/home_content_styles'
 import {Main, FlexCol, RoundedSubmitInput, RoundedSubmitTitle, RoundedSubmitButton} from '../styled/base';
 
 
-class RegisterUniversity extends Component {
+class RegisterMentor extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,8 +16,8 @@ class RegisterUniversity extends Component {
   }
 
   registerUniversityAction = () => {
-    const {username, password, name, zipcode, description, photoURL} = this.state;
-    this.props.actions.createUniversity(username, password, name, zipcode, description, photoURL);
+    const {username, password, name, universityName, tags} = this.state;
+    this.props.actions.createMentor(username, password, name, universityName, tags);
   }
 
   handleChange = (event) => {
@@ -37,7 +37,7 @@ class RegisterUniversity extends Component {
     return (
         <Main>
             <ContentSlogan>
-                <Slogan>Tell us a bit about your university!</Slogan>
+                <Slogan>Tell us a bit about yourself!</Slogan>
             </ContentSlogan>
             <FlexCol>
                 <RoundedSubmitTitle>Username</RoundedSubmitTitle>
@@ -46,12 +46,10 @@ class RegisterUniversity extends Component {
                 <RoundedSubmitInput id="password" onChange={this.handleChange}/>
                 <RoundedSubmitTitle>Name</RoundedSubmitTitle>
                 <RoundedSubmitInput id="name" onChange={this.handleChange}/>
-                <RoundedSubmitTitle>Zipcode</RoundedSubmitTitle>
-                <RoundedSubmitInput id="zipcode" onChange={this.handleChange}/>
-                <RoundedSubmitTitle>Description</RoundedSubmitTitle>
-                <RoundedSubmitInput id="description" onChange={this.handleChange}/>
-                <RoundedSubmitTitle>Profile Picture</RoundedSubmitTitle>
-                <RoundedSubmitInput id="photoURL" onChange={this.handleChange}/>
+                <RoundedSubmitTitle>University Name</RoundedSubmitTitle>
+                <RoundedSubmitInput id="universityName" onChange={this.handleChange}/>
+                <RoundedSubmitTitle>Add a list of you interests (Comma Seperated)!</RoundedSubmitTitle>
+                <RoundedSubmitInput id="tags" onChange={this.handleChange}/>
                 <RoundedSubmitButton onClick={this.registerUniversityAction}>Register</RoundedSubmitButton>
             </FlexCol>
         </Main>
@@ -59,13 +57,13 @@ class RegisterUniversity extends Component {
   }
 }
 
-RegisterUniversity.propTypes = {
+RegisterMentor.propTypes = {
   children: PropTypes.element,
   history: PropTypes.shape({
     push: PropTypes.func
   }),
   actions: PropTypes.shape({
-    createUniversity: PropTypes.func
+    createMentor: PropTypes.func
   }),
   loginInformation : PropTypes.shape({
     signedIn: PropTypes.bool
@@ -87,4 +85,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(RegisterUniversity);
+)(RegisterMentor);

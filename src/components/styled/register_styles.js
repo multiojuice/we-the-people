@@ -19,6 +19,7 @@ const RegisterOption = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 3vh;
+    cursor: pointer;
 `
 
 export {

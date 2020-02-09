@@ -16,8 +16,8 @@ class RegisterSchool extends Component {
   }
 
   registerSchoolAction = () => {
-    const {username, password, name, address, description, level, photoURL} = this.state;
-    this.props.actions.createSchool(username, password, name, address, description, level, photoURL);
+    const {username, password, name, zipcode, description, level, photoURL} = this.state;
+    this.props.actions.createSchool(username, password, name, zipcode, description, level, photoURL);
   }
 
   handleChange = (event) => {
@@ -37,7 +37,7 @@ class RegisterSchool extends Component {
     return (
         <Main>
             <ContentSlogan>
-                <Slogan>Tell us a bit about yourself!</Slogan>
+                <Slogan>Tell us a bit about your school!</Slogan>
             </ContentSlogan>
             <FlexCol>
                 <RoundedSubmitTitle>Username</RoundedSubmitTitle>
