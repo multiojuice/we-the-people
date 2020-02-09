@@ -16,6 +16,7 @@ import RegisterSchool from "./containers/RegisterSchool";
 import RegisterMentor from "./containers/RegisterMentor";
 import SignIn from "./containers/SignIn";
 import SignOut from "./containers/SignOut";
+import CreateEvent from "./containers/CreateEvent";
 import Me from './containers/Me';
 import NotFoundPage from "./NotFoundPage";
 import {AppWrapper} from './styled/base';
@@ -38,6 +39,7 @@ class App extends React.Component {
             <Route exact path="/signout" component={SignOut}/>
             <Route exact path="/signin" component={SignIn}/>
             <Route exact path="/me" component={Me} />
+            <Route exact path="/createEvent" component={CreateEvent} />
             <Route component={NotFoundPage} />
           </Switch>
           <Footer></Footer>

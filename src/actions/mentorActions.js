@@ -13,8 +13,6 @@ export function getMentor(id)  {
       method: 'GET'
     }).then(res => res.json());
 
-    console.warn('BOO1M', response);
-
     if (response) {
       return dispatch({
         type: types.GET_STUDENT,

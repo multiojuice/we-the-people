@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from '../../actions/schoolActions';
 import * as eventsActions from '../../actions/eventsActions';
+import { Link } from 'react-router-dom';
+
 
 import {FlexCol, RoundedSubmitInput, RoundedSubmitTitle, RoundedSubmitButton, FlexColFull} from '../styled/base';
 import { Slogan } from '../styled/home_content_styles';
@@ -50,13 +52,14 @@ class School extends Component {
 
   render() {
     const {id} = this.props.loginInformation;
-    console.warn(this.props);
 
     if(!this.props.schools || !this.props.schools[id]) {
         return <Slogan>Loading...</Slogan>;
     }
+
     return (
       <FlexColFull>
+        <Link to="/createEvent" style={{color:"black", marginTop: "200px"}}>Create a new Event</Link>
         <Slogan>{this.props.schools[id].name}</Slogan>
         <div style={{width: "60%", textAlign: "center", margin: "30px"}}>{this.props.schools[id].description}</div>
         <img src={this.props.schools[id].photoURL} style={{maxWidth: '40%'}}/>

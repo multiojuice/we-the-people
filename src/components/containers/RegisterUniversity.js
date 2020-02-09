@@ -27,8 +27,6 @@ class RegisterUniversity extends Component {
   }
 
   render() {
-    console.warn(this.state)
-    console.warn(this.props)
 
     if(this.props.loginInformation.signedIn) {
       this.props.history.push('/');

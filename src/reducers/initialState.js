@@ -13,6 +13,6 @@ export default {
     
   },
   events: {
-    
+    completedEventCreate: false
   }
 };

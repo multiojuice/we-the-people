@@ -31,8 +31,6 @@ class Register extends Component {
   }
 
   render() {
-    // console.warn(this.state)
-    // console.warn(this.props)
 
     return (
         <Main>

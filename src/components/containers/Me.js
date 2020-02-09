@@ -22,7 +22,6 @@ class Me extends Component {
   }
 
   render() {
-      console.warn(this.props)
 
     switch(this.props.loginInformation.type) {
         case 'U':

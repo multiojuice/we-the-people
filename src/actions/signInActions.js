@@ -13,7 +13,6 @@ export function signIn(username, password)  {
       method: 'GET'
     }).then(res => res.json());
 
-    console.warn('BOO1M', response);
 
 
     if (response) {
@@ -55,7 +54,6 @@ export function createSchool(username, password, name, zipcode, description, lev
     }).then(res => res.json());
 
     const {id} = response;
-    console.warn('BOO1M', id);
 
     const accountCreation = await fetch(`${Constants.api_url}/public-schools`, {
       headers: {
@@ -64,8 +62,6 @@ export function createSchool(username, password, name, zipcode, description, lev
       method: 'POST',
       body: JSON.stringify({name, zipcode, description, level, photoURL, id})
     }).then(res => res.json());
-
-    console.warn('BOOM');
 
     if (accountCreation) {
       return dispatch({
@@ -92,7 +88,6 @@ export function createUniversity(username, password, name, zipcode, description,
     }).then(res => res.json());
 
     const {id} = response;
-    console.warn('BOO1M', id);
 
     const accountCreation = await fetch(`${Constants.api_url}/universities`, {
       headers: {
@@ -102,7 +97,6 @@ export function createUniversity(username, password, name, zipcode, description,
       body: JSON.stringify({name, zipcode, description, photoURL, id})
     }).then(res => res.json());
 
-    console.warn('BOOM');
 
     if (accountCreation) {
       return dispatch({
@@ -129,7 +123,6 @@ export function createMentor(username, password, name, universityName, tags)  {
     }).then(res => res.json());
 
     const {id} = response;
-    console.warn('BOO1M', id);
 
     const univeristy = await fetch(`${Constants.api_url}/universities?name=${universityName}`, {
       headers: {
@@ -148,8 +141,6 @@ export function createMentor(username, password, name, universityName, tags)  {
       body: JSON.stringify({name, tags: arrayTags, id, univeristy: univeristy[0].id})
     }).then(res => res.json());
 
-    console.warn('BOOM', univeristy[0].id);
-
     if (accountCreation) {
       return dispatch({
         type: types.SIGNIN,
@@ -161,4 +152,40 @@ export function createMentor(username, password, name, universityName, tags)  {
       });
     }
   };
+}
+
+
+export function createEvent(owner, tags, name, description)  {
+  return  async (dispatch) => {
+    const arrayTags = tags.split(',');
+
+    const response = await fetch(`${Constants.api_url}/events`, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({tags: arrayTags, owner, name, description})
+    }).then(res => res.json());
+
+    if (response) {
+      return dispatch({
+        type: types.CREATE_EVENT,
+        payload: {
+          response,
+          completedEventCreate: true
+        }
+      });
+    }
+  };
+}
+
+export function toggleEventFinished() {
+  return  async (dispatch) => {
+    return dispatch({
+      type: types.CREATE_EVENT,
+      payload: {
+        completedEventCreate: false
+      }
+    });
+  }
 }

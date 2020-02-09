@@ -50,7 +50,6 @@ class Mentor extends Component {
 
   render() {
     const {id} = this.props.loginInformation;
-    console.warn(this.props);
 
     if(!this.props.mentors || !this.props.mentors[id]) {
         return <Slogan>Loading...</Slogan>;
