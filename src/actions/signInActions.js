@@ -3,22 +3,24 @@ import Constants from '../constants/constants';
 import * as types from '../constants/actionTypes';
 
 // example of a thunk using the redux-thunk middleware
-export function ahh(email)  {
+export function signIn(username, password)  {
   return  async (dispatch) => {
 
-    const response = await fetch(`${Constants.api_url}/blank`, {
+    const response = await fetch(`${Constants.api_url}/login?username=${username}&password=${password}`, {
       headers: {
         'Content-Type': 'application/json'
       },
-      method: 'POST',
-      body: JSON.stringify({email})
-    }).then(res => res.text());
+      method: 'GET'
+    }).then(res => res.json());
+
+    console.warn('BOOM', response)
 
     if (response) {
       return dispatch({
-        type: types.BLANK,
+        type: types.SIGNIN,
         payload: {
-          
+          signedIn: true,
+          id: response.id
         }
       });
     }
