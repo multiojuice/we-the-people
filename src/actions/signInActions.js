@@ -13,8 +13,6 @@ export function signIn(username, password)  {
       method: 'GET'
     }).then(res => res.json());
 
-    console.warn('BOOM', response)
-
     if (response) {
       return dispatch({
         type: types.SIGNIN,

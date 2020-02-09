@@ -24,8 +24,8 @@ class SignIn extends Component {
   }
 
   render() {
-    console.warn(this.state)
-    console.warn(this.props)
+    // console.warn(this.state)
+    // console.warn(this.props)
 
     return (
       <FlexCol>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import NavBar from './NavBar'
 import {Main} from '../styled/base'
 import {ContentSlogan, Slogan} from '../styled/home_content_styles'
 
@@ -15,10 +14,9 @@ class HomePage extends Component {
   render() {
     return (
       <Main>
-        <NavBar></NavBar>
         <ContentSlogan>
           <Slogan>
-            Empowering universities to lift their communities through education.
+            Empowering universities <br/>to lift their communities through education.
           </Slogan>
         </ContentSlogan>
       </Main>

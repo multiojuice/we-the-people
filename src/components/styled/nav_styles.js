@@ -1,20 +1,17 @@
 import styled from 'styled-components'
 
 const NavStyled = styled.div`
-    height: auto;
-    width: -moz-available;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: center;
-    margin: 2vh 5vh;
+    justify-content: space-between;
+    margin: 1vh 7vh;
 `
 
 const NavLinksStyled = styled.div`
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    padding: 0px 50px;
     align-items: center;
     justify-content: center;
     width: inherit;
@@ -23,13 +20,13 @@ const NavLinksStyled = styled.div`
 `
 const NavLinkStyled = styled.a`
     font-weight: light;
-    margin: 1em 3em;
+    margin: 0vh 2vh;
 `
 
 
 const Title = styled.h1`
     color: black;
-    font-size: 60px;
+    font-size: 35px;
     font-family: 'Pinyon Script', cursive;
 `
 

@@ -73,7 +73,6 @@ export const RoundedSubmitButton = styled.button`
 const Main = styled.div`
     display: flex;
     flex-direction: column;
-    height: inherit;
 `
 
 export {

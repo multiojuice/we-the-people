@@ -4,7 +4,7 @@ import styled from 'styled-components'
 //background-image: url(${backgroundImage});
 const ContentSlogan = styled.div`
     box-sizing: border-box;
-    margin: 8vh 5vh;
+    margin: 16vh 5vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -12,8 +12,8 @@ const ContentSlogan = styled.div`
 `
 
 const Slogan = styled.h2`
-    font-size: 4vh;
-    font-family: 'Lemonada',cursive;
+    font-size: 9vh;
+    font-family: 'EB Garamond', serif;
     color: black;
 `
 
