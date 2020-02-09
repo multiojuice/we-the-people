@@ -25,7 +25,7 @@ const ContentNotes = styled.div`
     height: 70vh;
     align-items: center;
     justify-content: space-evenly;
-    margin: 3em 0em;
+    margin: 25vh 0em;
     margin-left: 2vh;
 `
 
@@ -34,20 +34,21 @@ const Note = styled.div`
     border: 1px solid ${colors.graphite};
     background-color: ${props => props.color};
     width: 95%;
-    height: 100%;
+    height: 60vh;
     text-align: center;
 `
 
 const NoteTitle = styled.h1`
-    font-size: 3.5vh;
+    font-size: 4.5vh;
     margin: 7vh 0vh;
     margin-bottom: 2vh;
     font-family: 'Anton', sans-serif;
 `
 
 const NoteInfo = styled.p`
-    font-size: 3vh;
+    font-size: 3.4vh;
     margin: 2em 1em;
+    font-weight: 300;
 `
 
 const ContentBottom = styled.div`
@@ -62,6 +63,12 @@ const ContentBottom = styled.div`
     height: 50vh;
 `
 
+const ContentBottomTitle = styled.h1`
+    font-size: 4vh;
+    font-family: 'Andale Mono', sans-serif;
+    color: white;
+`
+
 export {
     ContentSlogan,
     Slogan,
@@ -69,5 +76,6 @@ export {
     Note,
     NoteTitle,
     NoteInfo,
-    ContentBottom
+    ContentBottom,
+    ContentBottomTitle
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Parallax } from 'react-scroll-parallax';
 
 import {Main} from '../styled/base'
-import {ContentSlogan, Slogan, ContentNotes, Note, NoteTitle, NoteInfo, ContentBottom} from '../styled/home_content_styles'
+import {ContentSlogan, Slogan, ContentNotes, Note, NoteTitle, NoteInfo, ContentBottom, ContentBottomTitle} from '../styled/home_content_styles'
 
 class HomePage extends Component {
   constructor(props) {
@@ -41,7 +41,11 @@ class HomePage extends Component {
             </Note>
           </Parallax>
         </ContentNotes>
-        <ContentBottom></ContentBottom>
+        <ContentBottom>
+          <ContentBottomTitle>
+            Hear what some of our mentor have to say!
+          </ContentBottomTitle>
+        </ContentBottom>
       </Main>
     );
   }
