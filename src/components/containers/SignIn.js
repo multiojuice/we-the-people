@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import NavBar from './NavBar'
+import {FlexCol} from '../styled/base';
 
 class SignIn extends Component {
   constructor(props) {
@@ -12,7 +12,9 @@ class SignIn extends Component {
 
   render() {
     return (
-      <NavBar></NavBar>
+      <FlexCol>
+        
+      </FlexCol>
     );
   }
 }

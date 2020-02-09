@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import NavBar from './NavBar'
 
 class Contact extends Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <NavBar></NavBar>
+      <div></div>
     );
   }
 }

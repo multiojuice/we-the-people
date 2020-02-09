@@ -19,6 +19,15 @@ export const RandomDiv = styled.div`
     justify-content: center;
 `;
 
+export const FlexCol = styled.div`
+    display: flex;
+    align-items: space-around;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-flow: column;
+`;
+
 export const RoundedSubmitWrapper = styled.div`
     display: flex;
     flex-direction: column;
