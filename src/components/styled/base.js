@@ -4,7 +4,6 @@ import colors from '../../constants/colors';
 export const AppWrapper = styled.div`
     position: absolute;
     top: 0; left: 0;
-    height: 100%;
     width: 100%;
     background-color: white;
     font-family: 'Rubik', sans-serif;
