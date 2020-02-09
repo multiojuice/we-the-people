@@ -12,9 +12,7 @@ class HomePage extends Component {
 
   render() {
     return (
-      <NavBar>
-        
-      </NavBar>
+      <NavBar></NavBar>
     );
   }
 }

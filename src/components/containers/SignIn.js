@@ -12,9 +12,7 @@ class SignIn extends Component {
 
   render() {
     return (
-      <NavBar>
-        
-      </NavBar>
+      <NavBar></NavBar>
     );
   }
 }

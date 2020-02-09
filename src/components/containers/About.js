@@ -12,9 +12,7 @@ class About extends Component {
 
   render() {
     return (
-      <NavBar>
-        
-      </NavBar>
+      <NavBar></NavBar>
     );
   }
 }

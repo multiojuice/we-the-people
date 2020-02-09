@@ -12,9 +12,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <NavBar>
-        
-      </NavBar>
+      <NavBar></NavBar>
     );
   }
 }
