@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 const NavStyled = styled.div`
     height: auto;
-    width: 100%;
+    width: -moz-available;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 2em 0em;
+    margin: 2vh 5vh;
 `
 
 const NavLinksStyled = styled.div`
@@ -23,14 +23,13 @@ const NavLinksStyled = styled.div`
 `
 const NavLinkStyled = styled.a`
     font-weight: light;
-    margin: 0em 3em;
+    margin: 1em 3em;
 `
 
 
 const Title = styled.h1`
     color: black;
     font-size: 60px;
-    width: inherit;
     font-family: 'Pinyon Script', cursive;
 `
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import NavBar from './NavBar'
 import {Main} from '../styled/base'
-import {Content, Slogan} from '../styled/home_content_styles'
+import {ContentSlogan, Slogan} from '../styled/home_content_styles'
 
 class HomePage extends Component {
   constructor(props) {
@@ -16,11 +16,11 @@ class HomePage extends Component {
     return (
       <Main>
         <NavBar></NavBar>
-        <Content>
+        <ContentSlogan>
           <Slogan>
-          &quot;Empowering universities to lift their communities through education.&quot;
+            Empowering universities to lift their communities through education.
           </Slogan>
-        </Content>
+        </ContentSlogan>
       </Main>
     );
   }

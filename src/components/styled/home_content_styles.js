@@ -1,23 +1,26 @@
 import styled from 'styled-components'
-//import backgroundImage from '../../assets/books_background.jpg'
+//import backgroundImage from '../../assets/sea-ocean-horizon-cloud-sky-sunrise-14926-pxhere.com.jpg'
 
-
-const Content = styled.div`
+//background-image: url(${backgroundImage});
+const ContentSlogan = styled.div`
     box-sizing: border-box;
-    background-color: grey;
-    height: 50%;
-    margin: 2vh 3vh;
-    background-size: 100%;
+    margin: 8vh 5vh;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
 `
 
 const Slogan = styled.h2`
     font-size: 4vh;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Lemonada',cursive;
+    color: black;
 `
 
 
+
+
 export {
-    Content,
+    ContentSlogan,
     Slogan
 }
