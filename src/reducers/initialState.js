@@ -3,4 +3,13 @@ export default {
     signedIn: false,
     id: ''
   },
+  schools: {
+
+  },
+  universities: {
+
+  }, 
+  mentors: {
+    
+  }
 };
