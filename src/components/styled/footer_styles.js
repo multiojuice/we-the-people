@@ -4,7 +4,7 @@ const FooterStyled = styled.div`
     display: flex;
     justify-content: space-between;
     background-color: inherit;
-    margin: 1em 3em;
+    padding: 1em 3em;
 `
 
 const FooterItem = styled.h3`

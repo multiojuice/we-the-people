@@ -15,7 +15,7 @@ const NavLinksStyled = styled.div`
     align-items: center;
     justify-content: center;
     width: inherit;
-    font-size: large;
+    font-size: smaller;
 }
 `
 const NavLinkStyled = styled.h2`

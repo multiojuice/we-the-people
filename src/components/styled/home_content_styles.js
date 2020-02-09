@@ -10,6 +10,7 @@ const ContentSlogan = styled.div`
     display: flex;
     align-items: center;
     justify-content: center
+    background-color: inherit;
 `
 
 const Slogan = styled.h2`

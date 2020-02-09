@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {ContentSlogan, Slogan} from '../styled/home_content_styles'
+import {Main, FlexCol, RoundedSubmitInput, RoundedSubmitTitle, RoundedSubmitButton} from '../styled/base';
+
 
 class Contact extends Component {
   constructor(props) {
@@ -11,7 +14,18 @@ class Contact extends Component {
 
   render() {
     return (
-      <div></div>
+      <Main>
+        <ContentSlogan>
+          <Slogan>Here to help every step of the way</Slogan>
+        </ContentSlogan>
+        <FlexCol>
+        <RoundedSubmitTitle>Name</RoundedSubmitTitle>
+        <RoundedSubmitInput id="username" onChange={this.handleChange}/>
+        <RoundedSubmitTitle>Questions/Comments</RoundedSubmitTitle>
+        <RoundedSubmitInput id="password" onChange={this.handleChange}/>
+        <RoundedSubmitButton onClick={this.signinAction}>Sign in</RoundedSubmitButton>
+      </FlexCol>
+      </Main>
     );
   }
 }

@@ -29,7 +29,12 @@ class NavBar extends Component {
                 <NavLinkStyled>
                     Contact
                 </NavLinkStyled>
-            </Link>           
+            </Link>
+            <Link to="/register" style={{ textDecoration: 'none', color: 'black' }}>
+                <NavLinkStyled>
+                    Register
+                </NavLinkStyled>
+            </Link>       
             { !this.props.signedIn ?
              <Link to="/signin" style={{ textDecoration: 'none', color: 'black' }}>
                 <NavLinkStyled>
