@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import * as actions from '../../actions/signInActions';
 import {FlexCol, RoundedSubmitInput, RoundedSubmitTitle, RoundedSubmitButton} from '../styled/base';
 import School from './School';
+import Mentor from './Mentor';
 
 class Me extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Me extends Component {
         case 'S':
             return <School />;
         case 'M':
-            return <div></div>;
+            return <Mentor />;
     }
     return null;
   }

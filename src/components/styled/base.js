@@ -29,6 +29,16 @@ export const FlexCol = styled.div`
     height: 60%;
 `;
 
+export const FlexColFull = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-flow: column;
+    margin: 4vh 0vh;
+    height: 60%;
+`;
+
 export const RoundedSubmitWrapper = styled.div`
     display: flex;
     flex-direction: column;

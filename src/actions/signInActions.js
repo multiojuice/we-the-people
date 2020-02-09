@@ -125,7 +125,7 @@ export function createMentor(username, password, name, universityName, tags)  {
         'Content-Type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({username, password, type: 'U'})
+      body: JSON.stringify({username, password, type: 'M'})
     }).then(res => res.json());
 
     const {id} = response;

@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as actions from '../../actions/schoolActions';
+import * as actions from '../../actions/mentorActions';
 import * as eventsActions from '../../actions/eventsActions';
 
 import {FlexCol, RoundedSubmitInput, RoundedSubmitTitle, RoundedSubmitButton, FlexColFull} from '../styled/base';
 import { Slogan } from '../styled/home_content_styles';
 
-class School extends Component {
+class Mentor extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,8 +16,8 @@ class School extends Component {
     }
   }
 
-  getSchool = () => {
-    this.props.actions.getSchool(this.props.loginInformation.id);
+  getMentor = () => {
+    this.props.actions.getMentor(this.props.loginInformation.id);
   }
 
   getEvent = (id) => {
@@ -25,8 +25,8 @@ class School extends Component {
   }
 
   componentDidMount = () => {
-      if (!this.props.schools[this.props.loginInformation.id]) {
-        this.getSchool()
+      if (!this.props.mentors[this.props.loginInformation.id]) {
+        this.getMentor();
       }
   }
 
@@ -37,7 +37,7 @@ class School extends Component {
   }
 
   renderEvents = () => {
-    return this.props.schools[this.props.loginInformation.id].events.map(element => {
+    return this.props.mentors[this.props.loginInformation.id].events.map(element => {
       if (this.props.events[element]) {
         return <div key={element}>{this.props.events[element].name} - {this.props.events[element].description}</div>
       } else {
@@ -52,35 +52,35 @@ class School extends Component {
     const {id} = this.props.loginInformation;
     console.warn(this.props);
 
-    if(!this.props.schools || !this.props.schools[id]) {
+    if(!this.props.mentors || !this.props.mentors[id]) {
         return <Slogan>Loading...</Slogan>;
     }
     return (
       <FlexColFull>
-        <Slogan>{this.props.schools[id].name}</Slogan>
-        <div style={{width: "60%", textAlign: "center", margin: "30px"}}>{this.props.schools[id].description}</div>
-        <img src={this.props.schools[id].photoURL} style={{maxWidth: '40%'}}/>
-    <div>Located at: {this.props.schools[id].zipcode}</div>
-    <h3>Events:</h3>
+        <Slogan>{this.props.mentors[id].name}</Slogan>
+        
+    <div>Interests: </div>
+    <div style={{width: "60%", textAlign: "center", margin: "30px"}}>{this.props.mentors[id].tags.map(elm => <div key={elm}>{elm}</div>)}</div>
+    <h3>Assigned Events:</h3>
     {this.renderEvents()}
       </FlexColFull>
     )
   }
 }
 
-School.propTypes = {
+Mentor.propTypes = {
   children: PropTypes.element,
   history: PropTypes.shape({
     push: PropTypes.func
   }),
   actions: PropTypes.shape({
-    getSchool: PropTypes.func
+    getMentor: PropTypes.func
   }),
   loginInformation: PropTypes.shape({
     signedIn: PropTypes.bool,
     id: PropTypes.string
   }),
-  schools: PropTypes.shape({
+  mentors: PropTypes.shape({
       id: PropTypes.any
   }),
   events: PropTypes.shape({
@@ -94,7 +94,7 @@ School.propTypes = {
 function mapStateToProps(state) {
   return {
     loginInformation: state.loginInformation,
-    schools: state.schools,
+    mentors: state.mentors,
     events: state.events
   };
 }
@@ -109,4 +109,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(School);
+)(Mentor);
