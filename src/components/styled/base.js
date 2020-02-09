@@ -6,7 +6,7 @@ export const AppWrapper = styled.div`
     top: 0; left: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: white;
     font-family: 'Rubik', sans-serif;
 `;
 

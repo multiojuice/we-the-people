@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import NavBar from './NavBar'
 
-class HomePage extends Component {
+class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,11 +19,11 @@ class HomePage extends Component {
   }
 }
 
-HomePage.propTypes = {
+SignIn.propTypes = {
   children: PropTypes.element,
   history: PropTypes.shape({
     push: PropTypes.func
   })
 };
 
-export default HomePage;
+export default SignIn;
