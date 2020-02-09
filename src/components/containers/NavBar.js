@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom'
 import {NavStyled, NavLinksStyled, Title, NavLinkStyled} from '../styled/nav_styles'
@@ -29,11 +30,18 @@ class NavBar extends Component {
                     Contact
                 </NavLinkStyled>
             </Link>           
+            { !this.props.signedIn ?
              <Link to="/signin" style={{ textDecoration: 'none', color: 'black' }}>
                 <NavLinkStyled>
                     Sign In
                 </NavLinkStyled>
+            </Link> : 
+            <Link to="/signout" style={{ textDecoration: 'none', color: 'black' }}>
+                <NavLinkStyled>
+                    Sign Out
+                </NavLinkStyled>
             </Link>
+            } 
         </NavLinksStyled>
       </NavStyled>
     );
@@ -42,9 +50,19 @@ class NavBar extends Component {
 
 NavBar.propTypes = {
   children: PropTypes.element,
+  signedIn: PropTypes.bool,
   history: PropTypes.shape({
     push: PropTypes.func
   })
 };
 
-export default NavBar;
+function mapStateToProps(state) {
+  return {
+    signedIn: state.loginInformation.signedIn
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  {}
+)(NavBar);

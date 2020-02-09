@@ -19,6 +19,14 @@ export const RandomDiv = styled.div`
     justify-content: center;
 `;
 
+export const FlexCol = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-flow: column;
+`;
+
 export const RoundedSubmitWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -28,7 +36,7 @@ export const RoundedSubmitWrapper = styled.div`
 
 export const RoundedSubmitTitle = styled.p`
     font-weight: 700;
-    color: white;
+    color: black;
     margin: 0 14px;
 `;
 
@@ -40,13 +48,13 @@ export const RoundedSubmitInput = styled.input`
     ::placeholder {
         color: ${colors.dark_gray};
     }
-    color: white;
+    color: black;
     border-radius: 16px;
     border: 1px solid ${colors.graphite};
     padding: 10px 14px;
     background-color: inherit;
-    outline: white;
-    width: 100%;
+    outline: black;
+    width: 40%;
     box-sizing: border-box;
 `;
 
@@ -58,7 +66,7 @@ export const RoundedSubmitButton = styled.button`
     font-weight: 700;
     border: none;
     height: 34px;
-    width: 100%;
+    width: 20%;
     outline: white;
 `;
 

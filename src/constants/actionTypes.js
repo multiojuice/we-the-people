@@ -1,1 +1,1 @@
-export const BLANK = 'BLANK';
+export const SIGNIN = 'SIGNIN';

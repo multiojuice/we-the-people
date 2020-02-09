@@ -1,3 +1,3 @@
 export default {
-    api_url: 'https://api.exampleAPI.com'
+    api_url: 'http://localhost:3002'
 }
